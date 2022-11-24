@@ -1,3 +1,4 @@
 django
 djangorestframwork
 djangorestframwork-simplejwt
+pillow

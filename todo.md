@@ -16,4 +16,12 @@ part - 3 : contact api
 3. create a apiview
 4. create an url
 5. how to apply this api using postman
- 
+
+
+ part - 4: Create Realtor app
+
+ 1. create a model agent
+ 2. create a serializer
+ 3. create 3 apiview using generics
+ 4. create an url
+ 5.  how to apply this api using postman
