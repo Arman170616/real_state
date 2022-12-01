@@ -25,3 +25,11 @@ part - 3 : contact api
  3. create 3 apiview using generics
  4. create an url
  5.  how to apply this api using postman
+
+
+part - 6: Search and Advanced Search api
+
+1. create search with single query
+2. for advance seacrh use filter method
+3. create URL
+4.cheack it using postman
