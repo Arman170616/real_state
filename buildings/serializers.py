@@ -4,7 +4,7 @@ from .models import Home, ImageFiles
 class HomeSerializer(serializers.ModelSerializer):
     class Meta:
         model = Home
-        field = ('title', 'slug', 'photo', 'bathrooms', 'sqrt', 'address', 'zipcode', 'city', 'description', 'sale_type', 'home_type', 'price', 'bedrooms', 'open_house','is_published')
+        fields = ('title', 'slug', 'photo', 'bathrooms', 'sqrt', 'address', 'zipcode', 'city', 'description', 'sale_type', 'home_type', 'price', 'bedrooms', 'open_house','is_published')
 
 
 class HomeDetailSerializer(serializers.ModelSerializer):
