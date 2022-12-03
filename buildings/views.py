@@ -28,12 +28,15 @@ class ImageView(APIView):
         images = home.images.all()
         serializer = ImageFilesSerializer(images, many=True)
         return Response(serializer.data, status=status.HTTP_200_OK)
-# class Search(APIView):
-#     permission_classes = (permissions.AllowAny,)
-#     def post(self, request, format=None):
-#         data = self.request.data 
-#         str = data['str']
-#         q = (Q(name_icontains=str)) | (Q(biodata_icontains=str))
-#         queryset = Agent.objects.filter(q)
-#         serializer = AgentSerializer(queryset, many= True)
-#         return Response(serializer.data)
+
+
+class Search(APIView):
+    permission_classes = (permissions.AllowAny,)
+    def post(self, request, format=None):
+        data = self.request.data 
+        str = data['str']
+        q = (Q(description_icontains=str)) | (Q(title_icontains=str))
+        queryset = Home.objects.filter(is_published = True)
+        queryset = queryset.filter(q)
+        serializer = HomeSerializer(queryset, many= True)
+        return Response(serializer.data)
